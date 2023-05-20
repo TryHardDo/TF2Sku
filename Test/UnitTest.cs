@@ -28,7 +28,7 @@ namespace Test
         [Test]
         public void TestToString()
         {
-            ItemElement item = new ItemElement
+            ItemElement item = new()
             {
                 Defindex = 123,
                 Quality = EQuality.Unique,

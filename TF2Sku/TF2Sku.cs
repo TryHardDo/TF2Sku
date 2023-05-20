@@ -86,7 +86,7 @@ namespace TF2.Sku
         /// <returns>An <see cref="ItemElement"/> object representing the parsed SKU string.</returns>
         public static ItemElement FromString(string sku)
         {
-            var item = new ItemElement();
+            ItemElement item = new();
             Queue<string> skuParts = new(sku.Split(';'));
             if (skuParts.Count > 0 && int.TryParse(skuParts.Dequeue(), out int defindex))
             {
@@ -113,7 +113,7 @@ namespace TF2.Sku
         /// <param name="item">The <see cref="ItemElement"/> object to modify based on the attribute.</param>
         private static void ProcessAttribute(string attribute, ref ItemElement item)
         {
-            var attr = attribute.Replace("-", "");
+            string attr = attribute.Replace("-", "");
 
             switch (attr)
             {
