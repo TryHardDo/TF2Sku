@@ -4,6 +4,35 @@
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <Title>TF2 SKU Parser for .NET</Title>
+    <Authors>TryHardDo</Authors>
+    <Description>The TF2 SKU Parser for .NET is a robust and efficient library designed to facilitate parsing of Team Fortress 2 (TF2) SKU strings into C# objects and vice versa. It provides developers with a straightforward way to work with TF2 item SKU strings in their .NET applications.
+
+Key Features:
+1, Parse TF2 SKU strings into ItemElement C# objects.
+2, Generate SKU strings from ItemElement objects.
+3, Leverage a flexible and comprehensive ItemElement class that represents TF2 items with various attributes such as quality, craftability, killstreak tier, and more.
+4, Take advantage of clean and well-documented code with comprehensive XML comments, making the library easy to integrate and use.
+
+Whether you're developing a TF2 trading platform, inventory management system, or any other application that requires parsing and handling of TF2 item SKU strings, the TF2 SKU Parser for .NET library provides a solid foundation to help you get your project off the ground.</Description>
+    <PackageProjectUrl>https://github.com/TryHardDo/TF2Sku</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/TryHardDo/TF2Sku</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>tf2, sku, trading</PackageTags>
+    <PackageReleaseNotes>First release!</PackageReleaseNotes>
+    <PackageIcon>logo.jpg</PackageIcon>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\..\..\Downloads\logo.jpg">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
 
 </Project>
