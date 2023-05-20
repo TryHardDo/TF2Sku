@@ -20,7 +20,7 @@ using TF2.Sku;
 ItemElement item = TF2Sku.FromString(30743;5;u117);
 
 // Converting C# object to its string equivalent
-string sku = TF2Sku.ToString(ItemElement item);
+string sku = TF2Sku.FromObject(ItemElement item);
 ```
 ## Tests
 The library is equipped with a basic unit tests to easily test output values.
