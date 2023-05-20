@@ -10,6 +10,18 @@ The SKU parsing logic supports various item attributes such as `defindex`, `qual
 - Supports various TF2 item attributes
 - Extendable and customizable
 
+## Usage examples
+```csharp
+using Sku.Enums;
+using Sku.Models;
+using TF2.Sku;
+
+// Converting item attributes from sku to C# object
+ItemElement item = TF2Sku.FromString(30743;5;u117);
+
+// Converting C# object to its string equivalent
+string sku = TF2Sku.ToString(ItemElement item);
+```
 ## Tests
 The library is equipped with a basic unit tests to easily test output values.
 
