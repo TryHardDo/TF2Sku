@@ -1,5 +1,4 @@
-﻿using Sku.Enums;
-using Sku.Models;
+﻿using Sku.Models;
 
 namespace TF2.Sku
 {
@@ -43,7 +42,7 @@ namespace TF2.Sku
             {
                 skuParts.Add($"pk{item.PaintKit}");
             }
-            if (item.ElevatedQuality == EQuality.Strange)
+            if (item.ElevatedQuality == 11)
             {
                 skuParts.Add("strange");
             }
@@ -73,7 +72,7 @@ namespace TF2.Sku
             }
             if (item.OutputQuality != null)
             {
-                skuParts.Add($"oq-{(int)item.OutputQuality}");
+                skuParts.Add($"oq-{item.OutputQuality}");
             }
 
             return string.Join(";", skuParts);
@@ -95,7 +94,7 @@ namespace TF2.Sku
 
             if (skuParts.Count > 0 && int.TryParse(skuParts.Dequeue(), out int qualityInt))
             {
-                item.Quality = (EQuality)qualityInt;
+                item.Quality = qualityInt;
             }
 
             while (skuParts.Count > 0)
@@ -127,7 +126,7 @@ namespace TF2.Sku
                     item.Festive = true;
                     break;
                 case "strange":
-                    item.ElevatedQuality = EQuality.Strange;
+                    item.ElevatedQuality = 11;
                     break;
                 default:
                     if (attr.StartsWith("kt") && int.TryParse(attr.AsSpan(2), out int ksInt))
@@ -164,7 +163,7 @@ namespace TF2.Sku
                     }
                     else if (attr.StartsWith("oq") && int.TryParse(attr.AsSpan(2), out int outputQuality))
                     {
-                        item.OutputQuality = (EQuality)outputQuality;
+                        item.OutputQuality = outputQuality;
                     }
                     break;
             }
